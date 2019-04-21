@@ -11,15 +11,14 @@
         <ion-card>
   
             <ion-item>
-              <h2>{{livro.titulo}} </h2>
-              <p>{{livro.subtitulo}}</p>
+              <h2>{{livro.details.title}} </h2>
+              <h6>Editora: {{livro.details.publishers}}</h6>
+              <h5>Autor: {{livro.details.authors}}</h5>
+
             </ion-item>          
             <ion-card-content>
-              <p>{{livro.editora.nome}}</p>
-              <p>{{livro.autor.nome}}</p>
-              <p>{{livro.isbn}}</p>
-              <p>{{livro.pagina}}</p>
-              <p>{{livro.publicacao}}</p>
+                <img class="img-livro" src={{livro.thumbnail_url}}>
+                <p>{{livro.details.description}}</p>
             </ion-card-content>
           
             <ion-row>

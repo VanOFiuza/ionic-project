@@ -11,6 +11,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {AdicionarLivroPageModule} from  '../pages/adicionar-livro/adicionar-livro.module';
 import {AlterarLivroPageModule} from  '../pages/alterar-livro/alterar-livro.module';
 import {LivroPageModule} from  '../pages/livro/livro.module';
+import {HttpModule} from "@angular/http";
+import { LivroProvider } from '../providers/livro/livro'; 
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import {LivroPageModule} from  '../pages/livro/livro.module';
     IonicModule.forRoot(MyApp),
     AlterarLivroPageModule,
     AdicionarLivroPageModule,
-    LivroPageModule
+    LivroPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,7 +38,8 @@ import {LivroPageModule} from  '../pages/livro/livro.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LivroProvider
   ]
 })
 export class AppModule {}
