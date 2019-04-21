@@ -16,9 +16,7 @@ export class ListPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
    
   }
-  goToAlterarLivro(){	
-    this.navCtrl.push(AlterarLivroPage);
-  }
+
   goToAdicionarLivro(){	
     this.navCtrl.push(AdicionarLivroPage);
   }
@@ -26,26 +24,6 @@ export class ListPage {
     this.navCtrl.push(LivroPage);
   }
 
-  showConfirm() {
-    const confirm = this.alertCtrl.create({
-      title: 'Excluir',
-      message: 'Deseja apagar o livro?',
-      buttons: [
-        {
-          text: 'Não',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
-        {
-          text: 'Sim',
-          handler: () => {
-            console.log('Agree clicked');
-          }
-        }
-      ]
-    });
-    confirm.present();
-  }
+
 }
 

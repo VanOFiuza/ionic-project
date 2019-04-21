@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { AlterarLivroPage } from '../alterar-livro/alterar-livro';
 
 /**
  * Generated class for the LivroPage page.
@@ -15,11 +16,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LivroPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LivroPage');
   }
-
+  goToAlterarLivro(){	
+    this.navCtrl.push(AlterarLivroPage);
+  }
+  showConfirm() {
+    const confirm = this.alertCtrl.create({
+      title: 'Excluir',
+      message: 'Deseja apagar o livro?',
+      buttons: [
+        {
+          text: 'Não',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Sim',
+          handler: () => {
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
 }
