@@ -16,35 +16,17 @@
 <ion-content>
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
     <ion-list>
-      <ion-card>
-
-          <ion-item>
-            <h2>Marty McFly</h2>
-            <p>November 5, 1955</p>
+        <ion-item (click)="goToLivro()" >
+          <h2>Cher</h2>
+          <p>Ugh. As if.</p>
+        </ion-item>
+        <ion-item (click)="goToLivro()">
+            <h2>Cher</h2>
+            <p>Ugh. As if.</p>
           </ion-item>
-        
-          
-        
-          <ion-card-content>
-            <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-          </ion-card-content>
-        
-          <ion-row>
-            <ion-col>
-             
-            </ion-col>
-            <ion-col>
-                <button (click)="goToAlterarLivro()" ion-button  small>
-                    <ion-icon name="ios-create-outline"></ion-icon>
-                    <div></div>
-                  </button>
-              <button  (click)="showConfirm()" ion-button  small>
-               
-                <ion-icon name="ios-trash-outline"></ion-icon>
-        
-              </button>
-            </ion-col>
-          </ion-row>
-        </ion-card>
+          <ion-item (click)="goToLivro()">
+              <h2>Cher</h2>
+              <p>Ugh. As if.</p>
+          </ion-item>
       </ion-list>
 </ion-content>

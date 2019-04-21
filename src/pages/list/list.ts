@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { AlterarLivroPage } from '../alterar-livro/alterar-livro';
 import { AdicionarLivroPage } from '../adicionar-livro/adicionar-livro';
+import { LivroPage } from '../livro/livro';
 
 @Component({
   selector: 'page-list',
@@ -15,11 +16,14 @@ export class ListPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
    
   }
-  goToAlterarLivro	(){	
+  goToAlterarLivro(){	
     this.navCtrl.push(AlterarLivroPage);
   }
-  goToAdicionarLivro	(){	
+  goToAdicionarLivro(){	
     this.navCtrl.push(AdicionarLivroPage);
+  }
+  goToLivro(){	
+    this.navCtrl.push(LivroPage);
   }
 
   showConfirm() {
