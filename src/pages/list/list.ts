@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
-import { AlterarLivroPage } from '../alterar-livro/alterar-livro';
 import { AdicionarLivroPage } from '../adicionar-livro/adicionar-livro';
 import { LivroPage } from '../livro/livro';
 
