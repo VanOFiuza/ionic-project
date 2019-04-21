@@ -11,11 +11,15 @@
         <ion-card>
   
             <ion-item>
-              <h2>Marty McFly</h2>
-              <p>November 5, 1955</p>
+              <h2>{{livro.titulo}} </h2>
+              <p>{{livro.subtitulo}}</p>
             </ion-item>          
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+              <p>{{livro.editora.nome}}</p>
+              <p>{{livro.autor.nome}}</p>
+              <p>{{livro.isbn}}</p>
+              <p>{{livro.pagina}}</p>
+              <p>{{livro.publicacao}}</p>
             </ion-card-content>
           
             <ion-row>

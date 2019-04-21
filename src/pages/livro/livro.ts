@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AlterarLivroPage } from '../alterar-livro/alterar-livro';
+import { Livro } from '../../model/Livro';
 
 /**
  * Generated class for the LivroPage page.
@@ -16,7 +17,9 @@ import { AlterarLivroPage } from '../alterar-livro/alterar-livro';
 })
 export class LivroPage {
 
+  public livro : Livro; 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
+    this.livro = this.navParams.get("livroSelecionado"); 
   }
 
   ionViewDidLoad() {

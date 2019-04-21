@@ -15,18 +15,11 @@
   </ion-header>
 <ion-content>
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-    <ion-list>
-        <ion-item (click)="goToLivro()" >
-          <h2>Cher</h2>
-          <p>Ugh. As if.</p>
-        </ion-item>
-        <ion-item (click)="goToLivro()">
-            <h2>Cher</h2>
-            <p>Ugh. As if.</p>
-          </ion-item>
-          <ion-item (click)="goToLivro()">
-              <h2>Cher</h2>
-              <p>Ugh. As if.</p>
-          </ion-item>
-      </ion-list>
+    <ion-list >	
+        <ion-item *ngFor="let livro of livros"  (click)="irParaDetalhe(livro)" >	 
+           <h2>{{livro.titulo}}</h2>	        
+           <p>{{livro.autor.nome}}</p>	   
+        </ion-item>	
+      </ion-list> 
+ 
 </ion-content>
