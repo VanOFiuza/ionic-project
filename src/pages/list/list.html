@@ -1,23 +1,50 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>List</ion-title>
-  </ion-navbar>
-</ion-header>
-
+    <ion-toolbar>
+      <ion-buttons start>
+          <button ion-button  menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+      </ion-buttons>
+      <ion-title>Livros</ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="goToAdicionarLivro()"  icon-only color="royal">
+            <ion-icon ios="ios-add" md="md-add"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+      <ion-card>
+
+          <ion-item>
+            <h2>Marty McFly</h2>
+            <p>November 5, 1955</p>
+          </ion-item>
+        
+          
+        
+          <ion-card-content>
+            <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+          </ion-card-content>
+        
+          <ion-row>
+            <ion-col>
+             
+            </ion-col>
+            <ion-col>
+                <button (click)="goToAlterarLivro()" ion-button  small>
+                    <ion-icon name="ios-create-outline"></ion-icon>
+                    <div></div>
+                  </button>
+              <button  (click)="showConfirm()" ion-button  small>
+               
+                <ion-icon name="ios-trash-outline"></ion-icon>
+        
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-list>
 </ion-content>
